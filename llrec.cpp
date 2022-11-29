@@ -16,18 +16,19 @@ void llpivot(Node *&head, Node *&smaller, Node *&larger, int pivot)
   }
   else
   {
+    Node* temp = head->next;
     if(head->val<=pivot)
     {
       smaller = head;
-      //smaller->next = nullptr;
-      llpivot(head->next, smaller->next, larger, pivot);
+      head = nullptr;
+      llpivot(temp, smaller->next, larger, pivot);
 
     }
     else if(head->val>pivot)
     {
       larger = head;
-      //larger->next = nullptr;
-      llpivot(head->next, smaller, larger->next, pivot);
+      head = nullptr;
+      llpivot(temp, smaller, larger->next, pivot);
     }
   }
 }

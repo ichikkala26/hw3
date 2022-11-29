@@ -98,6 +98,13 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
+    Node* smaller = nullptr;
+    Node* larger = nullptr;
+
+    int pivot = 1;
+    llpivot(head, smaller, larger, pivot);
+    print(smaller);
+    print(larger);
 
     /* TESTING PIVOT
     Node* smaller = nullptr;
@@ -117,10 +124,10 @@ int main(int argc, char* argv[])
     print(larger); */
 
     /*TESTING FILTER*/
-    Comp pred;
+    /*Comp pred;
 
     Node* temp = llfilter(head,pred);
-    print(temp);
+    print(temp);*/
 
     
     
